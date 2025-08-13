@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>{{ title }}</title>
+{% endblock  %}
+
+
+{% block content %}
+            <div class="modal-header justify-content-center">
+                <h3 class="mb-1">Registration</h3>
+            </div>
+
+            <div class="modal-body d-flex flex-column justify-content-center">
+                    
+                    <form class="booking-form row justify-content-center" action="{% url "users:registration" %}" method="post">
+                        {% csrf_token %}
+                        
+                        <div class="col-8">
+                            <label for="id_first_name" class="form-label">First name</label>
+
+                            <input type="text" name="first_name" id="id_first_name" class="form-control"
+                            placeholder="Name" value="{% if form.first_name.value %}{{form.first_name.value}}{% endif %}" required>
+                            {% if form.first_name.errors %}
+                            <div class="alert alert-danger alert-dismissible fade show">{{form.first_name.errors}}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="col-8">
+                            <label for="id_last_name" class="form-label">Last name</label>
+
+                            <input type="text" name="last_name" id="id_last_name" class="form-control"
+                            placeholder="Last Name" value="{% if form.last_name.value %}{{form.last_name.value}}{% endif %}" required>
+                            {% if form.last_name.errors %}
+                            <div class="alert alert-danger alert-dismissible fade show">{{form.last_name.errors}}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="col-8">
+                            <label for="id_username" class="form-label">Username</label>
+
+                            <input type="text" name="username" id="id_username" class="form-control"
+                            placeholder="Your Login" value="{% if form.username.value %}{{form.username.value}}{% endif %}" required>
+                            {% if form.username.errors %}
+                            <div class="alert alert-danger alert-dismissible fade show">{{form.username.errors}}</div>
+                            {% endif %}                            
+                        </div>
+
+                        <div class="col-8">
+                            <label for="id_email" class="form-label">Email Address</label>
+
+                            <input type="email" name="email" id="id_email" class="form-control"
+                            placeholder="your@email.com" value="{% if form.email.value %}{{form.email.value}}{% endif %}" required>
+                            {% if form.email.errors %}
+                            <div class="alert alert-danger alert-dismissible fade show">{{form.email.errors}}</div>
+                            {% endif %}
+                        </div>
+
+                        <div class="col-8">
+                            <label for="id_password1" class="form-label">Password*</label>
+                            <input type="password" class="form-control " name="password1" id="id_password1"
+                                placeholder="Type password" required>
+                            {% if form.password1.errors %}
+                            <div class="alert alert-danger alert-dismissible fade show">{{form.password1.errors}}</div>
+                            {% endif %}  
+
+                        </div>
+                        <div class="col-8">
+                            <label for="id_password2" class="form-label">Password confirmation*</label>
+                            <input type="password" class="form-control" name="password2" id="id_password2"
+                                placeholder="Confirm password" required>
+                                {% if form.password2.errors %}
+                                <div class="alert alert-danger alert-dismissible fade show">{{form.password2.errors}}</div>
+                                {% endif %} 
+                        </div>
+
+                        <div class="btn-block">
+                            <button type="submit" class="form-control">Submit</button>
+                        </div>
+                    </form>
+            </div>
+
+
+{% endblock  %}

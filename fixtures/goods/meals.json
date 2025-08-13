@@ -1,0 +1,101 @@
+[
+    {
+        "model": "products.meals",
+        "pk": 1,
+        "fields": {
+            "name": "Morning Fresh",
+            "price": "12.50",
+            "discount": "0.00",
+            "image": "meals_image/brett-jordan-8xt8-HIFqc8-unsplash.jpg",
+            "product_id": 1
+        }
+    },
+    {
+        "model": "products.meals",
+        "pk": 2,
+        "fields": {
+            "name": "Baked creamy",
+            "price": "16.50",
+            "discount": "0.00",
+            "image": "meals_image/lucas-swennen-1W_MyJSRLuQ-unsplash.jpg",
+            "product_id": 1
+        }
+    },
+    {
+        "model": "products.meals",
+        "pk": 3,
+        "fields": {
+            "name": "Burger Set",
+            "price": "36.50",
+            "discount": "10.00",
+            "image": "meals_image/louis-hansel-dphM2U1xq0U-unsplash.jpg",
+            "product_id": 1
+        }
+    },
+    {
+        "model": "products.meals",
+        "pk": 4,
+        "fields": {
+            "name": "Super Steak Set",
+            "price": "55.00",
+            "discount": "15.00",
+            "image": "meals_image/louis-hansel-cH5IPjaAYyo-unsplash.jpg",
+            "product_id": 2
+        }
+    },
+    {
+        "model": "products.meals",
+        "pk": 5,
+        "fields": {
+            "name": "Bread & Steak Set",
+            "price": "42.50",
+            "discount": "0.00",
+            "image": "meals_image/louis-hansel-rheOvfxOlOA-unsplash.jpg",
+            "product_id": 2
+        }
+    },
+    {
+        "model": "products.meals",
+        "pk": 6,
+        "fields": {
+            "name": "Seafood Set",
+            "price": "65.50",
+            "discount": "0.00",
+            "image": "meals_image/farhad-ibrahimzade-ZipYER3NLhY-unsplash.jpg",
+            "product_id": 3
+        }
+    },
+    {
+        "model": "products.meals",
+        "pk": 7,
+        "fields": {
+            "name": "Premium Steak",
+            "price": "74.25",
+            "discount": "0.00",
+            "image": "meals_image/keriliwi-c3mFafsFz2w-unsplash.jpg",
+            "product_id": 3
+        }
+    },
+    {
+        "model": "products.meals",
+        "pk": 8,
+        "fields": {
+            "name": "Salmon Set",
+            "price": "60.00",
+            "discount": "0.00",
+            "image": "meals_image/farhad-ibrahimzade-isHUj3N0194-unsplash.jpg",
+            "product_id": 3
+        }
+    },
+    {
+        "model": "products.meals",
+        "pk": 9,
+        "fields": {
+            "name": "Shaurma",
+            "price": "3.00",
+            "discount": "15.00",
+            "image": "meals_image/shaurma.png",
+            "product_id": 2
+        }
+    }
+]

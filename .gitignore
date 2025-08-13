@@ -1,0 +1,15 @@
+venv/
+.pylintrc
+__pycache__/
+
+.vscode
+.idea
+
+
+media/
+
+fixtures/news
+fixtures/users
+
+
+docker/redis/

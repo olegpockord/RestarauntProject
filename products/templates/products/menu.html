@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cache %}
+
+{% block title %}
+<title>{{ title }}</title>
+{% endblock  %}
+
+{% block content %}
+
+<main>
+
+    <header class="site-header site-menu-header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-10 col-12 mx-auto">
+                    <h1 class="text-white">Our Menus</h1>
+
+                    <strong class="text-white">Perfect for all Breakfast, Lunch and Dinner</strong>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+    </header>
+{% cache 600 product_cache %}
+    <section class="menu section-padding">
+
+        <div class="container">
+            <div class="row">
+                
+                {% for category in categories %}
+                <div class="col-12">
+                    <h2 class="mb-lg-5 mb-4">{{category.name}}</h2>
+                </div>
+                {% for product in products %}
+                {% if product.product_id_id == category.id%}
+                
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="menu-thumb">
+                        <img src="{{product.image.url}}" class="img-fluid menu-image" alt="">
+
+                        <div class="menu-info d-flex flex-wrap align-items-center">
+                            <h4 class="mb-0">{{product.name}}</h4>
+                            {% if product.discount %}
+                            <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>{{product.sell_price}}</span>
+                            {% else %}
+                            <span class="price-tag bg-white shadow-lg ms-4"><small>$</small>{{product.price}}</span>
+                            {% endif %}
+                            <div class="d-flex flex-wrap align-items-center w-100 mt-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+
+            </div>
+        </div>
+        
+    </section>
+    {% endcache %}
+
+
+</main>
+{% endblock  %}
