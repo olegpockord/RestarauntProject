@@ -2,13 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
-<<<<<<< HEAD
-# классовое представление
 
-=======
-# Class View
-# @method_decorator(cache_page(60*3), name='dispatch') dont work in Docker Container
->>>>>>> main
 class IndexView(TemplateView):
     template_name = 'main/index.html'
 
